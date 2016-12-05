@@ -20,13 +20,31 @@ describe('Actions', () => {
 
     expect(res).toEqual(action);
   });
-  
+
   it('should generate addTodo action', () => {
     var action = {
       type: 'ADD_TODO',
       text: 'Thing to do'
     }
     var res = actions.addTodo(action.text);
+
+    expect(res).toEqual(action);
+  });
+
+  it('should generate add todos action object', () => {
+    var todos = [{
+      id: '111',
+      text: 'algo',
+      completed: false,
+      completedAt: undefined,
+      createAt: 33025
+    }];
+    var action = {
+      type: 'ADD_TODOS',
+      todos
+    };
+
+    var res = actions.addTodos(todos);
 
     expect(res).toEqual(action);
   });
