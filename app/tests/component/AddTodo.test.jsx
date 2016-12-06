@@ -12,7 +12,7 @@ describe('AddTodo', () => {
     expect(AddTodo).toExist();
   });
 
-  it('should dispatch ADD_TODO when valid todo text', () => {
+  it('should dispatch startAddTodo action when valid todo text', () => {
     var todoText = 'Un todo nuevo';
     var action = actions.startAddTodo(todoText);
     var spy = expect.createSpy();
