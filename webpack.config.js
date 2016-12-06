@@ -28,6 +28,7 @@ module.exports = {
       './app/api'
     ],
     alias: {
+      app: 'app',
       applicationStyles: 'app/styles/app.scss',
       actions: 'app/actions/actions.jsx',
       reducers: 'app/reducers/reducers.jsx',
@@ -42,7 +43,7 @@ module.exports = {
         query: {
           presets: ['react', 'es2015', 'stage-0']
         },
-        test: /\.jsx$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }
     ]
